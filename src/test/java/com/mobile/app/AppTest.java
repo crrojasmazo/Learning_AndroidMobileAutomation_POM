@@ -1,19 +1,12 @@
 package com.mobile.app;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Test;
+import io.appium.java_client.android.options.UiAutomator2Options;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest {
 
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue() {
-        assertTrue(true);
-    }
+
 }
