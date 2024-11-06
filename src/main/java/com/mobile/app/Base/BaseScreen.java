@@ -1,5 +1,6 @@
 package com.mobile.app.Base;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.WebElement;
@@ -9,14 +10,24 @@ import java.net.URL;
 
 public class BaseScreen {
 
-    public AndroidDriver getDriver(){
-        return getDriver();
+    public static AppiumDriver driver;
+
+    public BaseScreen(){
+        driver = getDriver();
+    }
+
+    public AppiumDriver getDriver(){
+        if(driver == null){
+            return createDriver();
+        } else {
+            return driver;
+        }
 
     }
 
-    private AndroidDriver createDriver(){
+    private AppiumDriver createDriver(){
         try {
-            return new AndroidDriver(
+            return new AppiumDriver(
                     new URL("http://127.0.0.1:4723"), setCapabilities()
             );
         } catch (MalformedURLException e) {
@@ -36,6 +47,10 @@ public class BaseScreen {
 
     public void click(WebElement element){
         element.click();
+    }
+
+    public void sendKeys(WebElement element, String text){
+        element.sendKeys(text);
     }
 
 }
