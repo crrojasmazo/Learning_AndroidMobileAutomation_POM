@@ -9,6 +9,7 @@
 
     <test name="Regression">
         <classes>
+            <class name="com.mobile.app.OpenTheAppTest"/>
             <class name="com.mobile.app.NavigationTest"/>
         </classes>
     </test>

@@ -26,8 +26,4 @@ public class AccessibilityScreen extends BaseScreen {
                 btnAccessService.isDisplayed() &&
                 btnCustomView.isDisplayed();
     }
-
-
-
-
 }

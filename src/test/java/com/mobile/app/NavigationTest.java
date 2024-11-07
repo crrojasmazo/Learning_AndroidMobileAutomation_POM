@@ -2,6 +2,7 @@ package com.mobile.app;
 
 import com.mobile.app.Base.BaseTest;
 import com.mobile.app.screens.AccessibilityScreen;
+import com.mobile.app.screens.AnimationScreen;
 import com.mobile.app.screens.HomeScreen;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -23,6 +24,16 @@ public class NavigationTest extends BaseTest {
         AccessibilityScreen accesibilityScreen = homeScreen.tapOnAccessibility();
         Assert.assertTrue(accesibilityScreen.isAccessibilityScreenDisplayed());
         accesibilityScreen.navigateBack();
+        Assert.assertTrue(homeScreen.isHomeScreenDisplayed());
+    }
+
+    @Test
+    public void testOpenNavigationToAnimationScreen() {
+        HomeScreen homeScreen = new HomeScreen(driver);
+        Assert.assertTrue(homeScreen.isHomeScreenDisplayed());
+        AnimationScreen animationScreen = homeScreen.tapOnAnimationScreen();
+        Assert.assertTrue(animationScreen.isAnimationScreenDisplayed());
+        animationScreen.navigateBack();
         Assert.assertTrue(homeScreen.isHomeScreenDisplayed());
     }
 }
