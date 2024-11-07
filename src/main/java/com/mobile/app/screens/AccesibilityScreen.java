@@ -1,6 +1,7 @@
 package com.mobile.app.screens;
 
 import com.mobile.app.Base.BaseScreen;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -13,6 +14,7 @@ public class AccesibilityScreen extends BaseScreen {
 
     private WebElement btnCustomView = getDriver().findElement(By.xpath("//android.widget.TextView[@content-desc=\"Custom View\"]"));
 
+    @Step("Checking the accessibility screen is displayed")
     public boolean isAccessibilityScreenDisplayed() {
         return btnAccessNodeProvider.isDisplayed() &&
                 btnAccessNodeQuerying.isDisplayed() &&

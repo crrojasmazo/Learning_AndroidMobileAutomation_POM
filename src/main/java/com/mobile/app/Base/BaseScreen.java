@@ -3,6 +3,7 @@ package com.mobile.app.Base;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 
 import java.net.MalformedURLException;
@@ -45,7 +46,8 @@ public class BaseScreen {
                 .setApp("C:\\Users\\crroj\\Documents\\ApiDemosdebug.apk");
     }
 
-    public void click(WebElement element){
+    @Step("Tap on {1}")
+    public void click(WebElement element, String elementName){
         element.click();
     }
 
