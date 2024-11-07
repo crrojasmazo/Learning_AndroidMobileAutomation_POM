@@ -1,4 +1,4 @@
-# Learning Android Mobil eAutomation using POM
+# Learning Android Mobile Automation using POM
 
 Small project to practice the basics of the mobile automation with appium and UiAutomator2
 
