@@ -8,7 +8,6 @@
     </listeners>
 
     <test name="Regression">
-
         <classes>
             <class name="com.mobile.app.NavigationTest"/>
         </classes>

@@ -1,19 +1,24 @@
 package com.mobile.app.screens;
 
 import com.mobile.app.Base.BaseScreen;
+import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class HomeScreen extends BaseScreen {
 
-    private WebElement txtTitle = getDriver().findElement(By.xpath("//android.widget.TextView[@text=\"API Demos\"]"));
+    public HomeScreen(AndroidDriver driver) {
+        super(driver);
+    }
 
-    private WebElement btnAccesibility = getDriver().findElement(By.xpath("//android.widget.TextView[@content-desc=\"Accessibility\"]"));
+    private WebElement txtTitle = driver.findElement(By.xpath("//android.widget.TextView[@text=\"API Demos\"]"));
 
-    public AccesibilityScreen tapOnAccessibility(){
+    private WebElement btnAccesibility = driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Accessibility\"]"));
+
+    public AccessibilityScreen tapOnAccessibility(){
         click(btnAccesibility, "Accessibility Button");
-        return new AccesibilityScreen();
+        return new AccessibilityScreen(driver);
     }
 
     @Step("Check the home screen is displayed")
