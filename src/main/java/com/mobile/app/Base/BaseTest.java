@@ -1,6 +1,7 @@
 package com.mobile.app.Base;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
@@ -8,6 +9,7 @@ import java.net.URL;
 import java.time.Duration;
 
 import static com.mobile.app.Base.Capabilities.setCapabilities;
+import static com.mobile.app.utils.EvidenceTaker.captureScreenshot;
 
 
 public class BaseTest {
@@ -20,7 +22,11 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown(ITestResult result){
+        if (ITestResult.FAILURE == result.getStatus()) {
+            captureScreenshot(result.getName(), driver);
+        }
+
         if (driver != null) {
             driver.quit();
         }

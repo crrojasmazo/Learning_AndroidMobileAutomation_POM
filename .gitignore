@@ -4,3 +4,4 @@
 target/**
 .idea/**
 src/allure-results/**
+/screenshots/**
