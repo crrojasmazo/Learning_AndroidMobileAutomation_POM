@@ -2,12 +2,12 @@ package com.mobile.app.screens;
 
 import com.mobile.app.Base.BaseScreen;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 
 public class AnimationScreen extends BaseScreen {
 
-    protected AnimationScreen(AndroidDriver androidDriver){
+    protected AnimationScreen(AppiumDriver androidDriver){
         super(androidDriver);
     }
 

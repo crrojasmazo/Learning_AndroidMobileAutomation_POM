@@ -1,18 +1,15 @@
 package com.mobile.app.Base;
 
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
-
-import static com.mobile.app.Base.BaseTest.driver;
-
 
 public class BaseScreen {
 
 
-    protected AndroidDriver driver;
+    protected AppiumDriver driver;
 
-    public BaseScreen(AndroidDriver driver) {
+    public BaseScreen(AppiumDriver driver) {
         this.driver = driver;
     }
 

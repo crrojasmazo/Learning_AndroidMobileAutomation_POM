@@ -11,7 +11,7 @@ public class NavigationTest extends BaseTest {
 
     @Test
     public void testAccessibility(){
-        HomeScreen homeScreen = new HomeScreen(driver);
+        HomeScreen homeScreen = new HomeScreen(getDriver());
         Assert.assertTrue(homeScreen.isHomeScreenDisplayed());
         AccessibilityScreen accesibilityScreen = homeScreen.tapOnAccessibility();
         Assert.assertTrue(accesibilityScreen.isAccessibilityScreenDisplayed());
@@ -19,7 +19,7 @@ public class NavigationTest extends BaseTest {
 
     @Test
     public void testOpenNavigateAndTurnBack() {
-        HomeScreen homeScreen = new HomeScreen(driver);
+        HomeScreen homeScreen = new HomeScreen(getDriver());
         Assert.assertTrue(homeScreen.isHomeScreenDisplayed());
         AccessibilityScreen accesibilityScreen = homeScreen.tapOnAccessibility();
         Assert.assertTrue(accesibilityScreen.isAccessibilityScreenDisplayed());
@@ -29,7 +29,7 @@ public class NavigationTest extends BaseTest {
 
     @Test
     public void testOpenNavigationToAnimationScreen() {
-        HomeScreen homeScreen = new HomeScreen(driver);
+        HomeScreen homeScreen = new HomeScreen(getDriver());
         Assert.assertTrue(homeScreen.isHomeScreenDisplayed());
         AnimationScreen animationScreen = homeScreen.tapOnAnimationScreen();
         Assert.assertTrue(animationScreen.isAnimationScreenDisplayed());

@@ -10,7 +10,7 @@ public class OpenTheAppTest extends BaseTest {
 
     @Test
     public void testAccessibility(){
-        HomeScreen homeScreen = new HomeScreen(driver);
+        HomeScreen homeScreen = new HomeScreen(getDriver());
         Assert.assertTrue(homeScreen.isHomeScreenDisplayed());
     }
 

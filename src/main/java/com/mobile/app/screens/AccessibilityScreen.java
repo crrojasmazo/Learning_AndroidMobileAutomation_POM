@@ -1,14 +1,14 @@
 package com.mobile.app.screens;
 
 import com.mobile.app.Base.BaseScreen;
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class AccessibilityScreen extends BaseScreen {
 
-    public AccessibilityScreen(AndroidDriver driver) {
+    public AccessibilityScreen(AppiumDriver driver) {
         super(driver);
     }
     private WebElement btnAccessNodeProvider = driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Accessibility Node Provider\"]"));
