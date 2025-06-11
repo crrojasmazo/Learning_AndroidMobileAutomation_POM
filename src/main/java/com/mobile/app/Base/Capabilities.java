@@ -9,7 +9,6 @@ public class Capabilities {
                 .setDeviceName(deviceName)
                 .setAutomationName("Uiautomator2")
                 .setPlatformVersion(platformVersion)
-                .setAppPackage("com.saucelabs.mydemoapp.android")
-                .setApp("C:\\Users\\crroj\\Documents\\mda-2.2.0-25.apk");
+                .setApp("C:\\Users\\crroj\\Documents\\ApiDemos-debug.apk");
     }
 }
