@@ -19,3 +19,5 @@ src/allure-results/**
 .idea/shelf/
 .idea/tasks/
 .idea/httpRequests/
+
+*.iml
